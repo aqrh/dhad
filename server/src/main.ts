@@ -19,7 +19,7 @@ async function bootstrap() {
   app.enableCors({
     origin: [
       'http://localhost:3000',
-      'https://zingy-puffpuff-8fbeb7.netlify.app/',
+      'https://dh-ad.netlify.app',
     ],
     credentials: true,
   });
