@@ -275,8 +275,6 @@ export function VerifyOtpForm() {
           : t("resendCode")}
       </button>
 
-      {process.env.NODE_ENV !==
-        "production" && (
         <button
           type="button"
           onClick={
@@ -286,7 +284,6 @@ export function VerifyOtpForm() {
         >
           {t("useDevelopmentCode")}
         </button>
-      )}
     </form>
   );
 }
