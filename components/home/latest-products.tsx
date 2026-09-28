@@ -10,36 +10,42 @@ const products = [
     name: "Beige Polo Crop Top",
     price: 24,
     image: "/images/products/product-1.jpeg",
+    totalStock: 12,
   },
   {
     id: "2",
     name: "Two-piece Set",
     price: 35,
     image: "/images/products/product-2.jpeg",
+    totalStock: 12,
   },
   {
     id: "3",
     name: "Burgundy Dress",
     price: 30,
     image: "/images/products/product-3.jpg",
+    totalStock: 12,
   },
   {
     id: "4",
     name: "Black Polo T-Shirt",
     price: 45,
     image: "/images/products/product-4.jpg",
+    totalStock: 12,
   },
     {
     id: "5",
     name: "Two-piece Set",
     price: 30,
     image: "/images/products/product-2.jpeg",
+    totalStock: 12,
   },
     {
     id: "6",
     name: "Two-piece Set",
     price: 28,
     image: "/images/products/product-2.jpeg",
+    totalStock: 12,
   },
 ];
 
@@ -82,6 +88,7 @@ export const LatestProducts = async () => {
                     name={product.name}
                     price={product.price}
                     image={product.image}
+                    totalStock={product.totalStock}
                   />
                 </div>
               ))}
