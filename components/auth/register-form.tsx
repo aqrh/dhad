@@ -89,7 +89,6 @@ export function RegisterForm() {
           result.devCode
         );
       } else {
-        console.log(result.devCode);
         sessionStorage.removeItem(
           "auth_dev_code"
         );
