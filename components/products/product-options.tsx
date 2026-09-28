@@ -180,6 +180,18 @@ export function ProductOptions({
       }
     );
 
+    const totalStock = product.variants.reduce(
+  (sum, variant) =>
+    sum + variant.stock,
+  0
+  );
+
+  const hasVariants =
+    product.variants.length > 0;
+
+  const productOutOfStock =
+    !hasVariants || totalStock <= 0;
+
   const displayPrice =
     selectedVariant?.price ??
     product.basePrice;
@@ -242,6 +254,14 @@ export function ProductOptions({
 
   const handleAddToCart =
     () => {
+
+    if (
+      productOutOfStock ||
+      !selectedVariant ||
+      selectedVariant.stock < 1
+    ) {
+        return;
+      }
       if (!selectedVariant) {
         return;
       }
@@ -420,10 +440,11 @@ export function ProductOptions({
       </Link>
 
       {/* ADD TO CART */}
-      <div className="pointer-events-auto fixed inset-x-0 bottom-[72px] z-[100] border-t border-black/10 bg-white px-4 py-3">
+      <div className="pointer-events-auto -mb-4 fixed inset-x-0 bottom-[72px] z-[100] border-t border-black/10 bg-white px-4 py-3">
         <button
           type="button"
           disabled={
+            productOutOfStock ||
             !selectedVariant
           }
           onClick={

@@ -34,6 +34,7 @@ type ProductCardProps = {
   price: number;
   image: string;
   href?: string;
+  totalStock: number;
 
   initialFavorite?: boolean;
 };
@@ -44,10 +45,13 @@ export const ProductCard = ({
   price,
   image,
   href = "#",
+  totalStock,
   initialFavorite = false,
 }: ProductCardProps) => {
   const locale = useLocale();
   const router = useRouter();
+
+  const outOfStock = totalStock <= 0;
 
   const [
     isFavorite,
@@ -60,6 +64,7 @@ export const ProductCard = ({
     pending,
     setPending,
   ] = useState(false);
+
 
   const handleFavorite = async () => {
     if (pending) {
@@ -179,6 +184,12 @@ export const ProductCard = ({
               {name}
             </p>
 
+            <p className={`mt-1 text-xs font-bold ${outOfStock ? "text-red-600"
+              : "text-black/40"
+            }`}
+            >
+              {outOfStock ? "Out Of Stock" : `${totalStock} in stock`}
+            </p>
             <div>
               <p className="mt-1 text-sm text-(--text-secondary)">
                 {formatPriceIQD(price)}

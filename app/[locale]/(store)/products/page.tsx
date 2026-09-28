@@ -8,6 +8,7 @@ import type{
   ProductCategory,
   ProductAudience,
 } from "@/lib/api/products";
+import { Sumana } from "next/font/google";
 
 type Props = {
   params: Promise<{
@@ -308,6 +309,7 @@ const pageTitle =
         id={String(product.id)}
         name={product.name}
         price={product.price}
+        totalStock={product.variants.reduce((sum, variant) => sum + variant.stock, 0)}
         image={
           product.images[0]?.url ??
           "/images/products/burgundy_brand.jpeg"

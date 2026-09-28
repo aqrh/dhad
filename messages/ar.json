@@ -47,7 +47,10 @@
     "addToCart": "أضف إلى السلة",
     "addedToCart": "تمت الاضافة الى السلة",
     "selectSize": "اختر المقاس",
-    "inStock": "متوفر"
+    "inStock": "متوفر",
+    "outOfStock": "تم نفاذ الكمية",
+    "thisProductIsOutStock": "تم نفاذ هذا المنتج!",
+    "unitsAvailable": "وحدات متوفرة"
   },
   "cart": {
   "title": "سلة التسوق",
