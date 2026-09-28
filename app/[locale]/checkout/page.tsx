@@ -4,7 +4,7 @@ import { getTranslations } from "next-intl/server";
 import { CheckoutForm } from "@/components/checkout/checkout-form";
 import type { Address } from "@/lib/api/addresses";
 
-const API_URL = process.env.API_URL;
+const API_URL = process.env.NEXT_PUBLIC_API_URL;
 
 async function getSavedAddresses(): Promise<Address[]> {
   if (!API_URL) {

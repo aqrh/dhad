@@ -17,7 +17,7 @@ import type {
 import { formatPriceIQD } from "@/lib/format-price";
 
 const API_URL =
-  process.env.API_URL;
+  process.env.NEXT_PUBLIC_API_URL;
 
 type Props = {
   params: Promise<{

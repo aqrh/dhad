@@ -5,7 +5,7 @@ import { getTranslations } from "next-intl/server";
 import { AddressesList } from "@/components/account/addresses-list";
 import type { Address } from "@/lib/api/addresses";
 
-const API_URL = process.env.API_URL;
+const API_URL = process.env.NEXT_PUBLIC_API_URL;
 
 type Props = {
   params: Promise<{

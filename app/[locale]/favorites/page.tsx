@@ -10,7 +10,7 @@ import type {
 import { MobileBottomNav } from "@/components/layout/mobile-bottom-nav";
 
 const API_URL =
-  process.env.API_URL;
+  process.env.NEXT_PUBLIC_API_URL;
 
 type Props = {
   params: Promise<{

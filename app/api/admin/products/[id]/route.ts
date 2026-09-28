@@ -141,7 +141,7 @@ export async function DELETE(
   }
 
   const response = await fetch(
-    `${process.env.API_URL}/admin/products/${id}`,
+    `${process.env.NEXT_PUBLIC_API_URL}/admin/products/${id}`,
     {
       method: "DELETE",
 

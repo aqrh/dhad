@@ -19,7 +19,7 @@ import {
 } from "@/components/admin/admin-products-dashboard";
 
 const API_URL =
-  process.env.API_URL;
+  process.env.NEXT_PUBLIC_API_URL;
 
 type Props = {
   params: Promise<{

@@ -8,7 +8,7 @@ export type CurrentUser = {
   role: string;
 };
 
-const API_URL = process.env.API_URL;
+const API_URL = process.env.NEXT_PUBLIC_API_URL;
 
 export async function getCurrentUser(): Promise<CurrentUser | null> {
   if (!API_URL) {
