@@ -11,7 +11,7 @@ export async function POST() {
     httpOnly: true,
     sameSite: "lax",
     secure:
-      process.env.NODE_ENV ===
+      process.env.NEXT_PUBLIC_ENABLE_DEV_OTP ===
       "production",
     path: "/",
     maxAge: 0,

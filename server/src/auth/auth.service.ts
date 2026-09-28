@@ -205,7 +205,7 @@ export class AuthService {
      * return the OTP so we can test.
      */
     if (
-      process.env.NODE_ENV !==
+      process.env.NEXT_PUBLIC_ENABLE_DEV_OTP !==
       'production'
     ) {
       return {
