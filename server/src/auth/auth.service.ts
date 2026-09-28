@@ -205,7 +205,8 @@ export class AuthService {
      * return the OTP so we can test.
      */
     if (
-      process.env.NODE_ENV === "true"
+      process.env.NODE_ENV !==
+      'production'
     ) {
       return {
         success: true,
